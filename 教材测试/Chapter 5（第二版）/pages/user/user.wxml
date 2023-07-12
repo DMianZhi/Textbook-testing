@@ -1,0 +1,22 @@
+<!-- pages/user/user.wxml -->
+<view class="user">
+  <!-- 显示用户头像和昵称 -->
+  <view class="head">
+    <image src="{{imgUrl}}" mode="aspectFill" class="img" wx:if="{{headState}}" bindtap="chooseHead" />
+    <!-- 如果没有添加头像，则显示“+” -->
+    <view class="not" wx:else="{{headState}}" bindtap="chooseHead">+</view>
+  </view>
+  <view class="name">name</view>
+</view>
+
+<view class="history">
+  <!-- 显示浏览记录列表的标题 -->
+  <view class="historyText">History Browse</view>
+  <!-- 如果浏览记录列表为空，则显示“暂无浏览记录” -->
+  <view class="notBrowse" wx:if="{{browseState}}">暂无浏览记录</view>
+  <!-- 使用 wx:for 指令循环遍历浏览记录数组，并显示每个记录的标题和内容 -->
+  <view class="item" wx:for="{{historyItem}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}" wx:if="{{!browseState}}">
+    <view class="title">{{ item.title }}</view>
+    <view class="body">{{item.body}}</view>
+  </view>
+</view>

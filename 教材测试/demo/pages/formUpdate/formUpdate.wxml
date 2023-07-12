@@ -1,0 +1,47 @@
+<view class="feedback-page">
+  <view class="section">
+    <text class="section-title">请评价本学期接触的第一门课程：</text>
+    <picker mode="selector" range="{{['非常满意', '满意', '一般', '不满意', '非常不满意']}}" bindchange="handleFirstCourseChange">
+      <view class="picker-view">
+        {{firstCourse[firstCourseIndex]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <text class="section-title">请评价对教师讲解方式等方面的认同程度：</text>
+    <radio-group bindchange="handleTeacherTeachingMethodChange">
+      <label class="radio-label" wx:for="{{['非常认同', '认同', '一般', '不认同', '非常不认同']}}" wx:key="item">
+        <radio value="{{item}}"></radio>
+        <text>{{item}}</text>
+      </label>
+    </radio-group>
+  </view>
+
+  <view class="section">
+    <text class="section-title">请针对课堂内容给出您的建议和意见：</text>
+    <textarea class="textarea-input" placeholder="请输入您的建议或意见" maxlength="200" bindinput="handleTextAreaInput"></textarea>
+  </view>
+
+  <view class="section">
+    <text class="section-title">请选择适合自己的评估方式：</text>
+    <checkbox-group bindchange="handleEvaluationMethodChange">
+      <label class="checkbox-label" wx:for="{{['平时表现', '期末考试', '作业', '小组讨论']}}" wx:key="item">
+        <checkbox value="{{item}}"></checkbox>
+        <text>{{item}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class="section">
+    <text class="section-title">是否愿意参加学校举办的各类学科竞赛和活动？</text>
+    <switch checked="{{false}}" bindchange="handleSwitchChange"></switch>
+  </view>
+
+  <view class="section">
+    <text class="section-title">总结性留言：</text>
+    <textarea class="textarea-input" placeholder="请输入总结性留言" maxlength="200" bindinput="handleSummaryInput"></textarea>
+  </view>
+
+  <button class="submit-button" bindtap="handleSubmitClick">提交</button>
+</view>

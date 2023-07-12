@@ -1,0 +1,19 @@
+<view class="container">
+  <scroll-view class="list" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation="{{animation}}">
+    <view class="item" style="background-color: #FF9966;">
+      <view>Item 1</view>
+    </view>
+    <view class="item" style="background-color: #FF6666">
+      <view>Item 2</view>
+    </view>
+    <view class="item" style="background-color: #ffcccc">
+      Item 3
+    </view>
+  </scroll-view>
+  <view class="button-group">
+    <view class="button" bindtap="onScrollToUpper">返回顶部</view>
+    <view class="button" bindtap="onScrollToLower">滚动到底部</view>
+    <view class="button" bindtap="onToggleAnimation">{{animation ? '关闭' : '开启'}}滚动动画</view>
+  </view>
+</view>
+<navigator hover-class="navigator-hover" open-type="navigateBack" delta="2"> 返回上两页 </navigator>

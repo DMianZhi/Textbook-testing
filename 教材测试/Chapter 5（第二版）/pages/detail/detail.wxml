@@ -1,0 +1,16 @@
+<!-- pages/detail/detail.wxml-->
+<view class="container">
+  <!-- 显示详情页的标题、内容和评论列表 -->
+  <view class="title">{{ detailArr.title }}</view>
+  <view class="body">{{detailArr.body}}</view>
+  <view class="comment">
+    <!-- 显示评论列表的标题 -->
+    <text class="commentTitle">Comment</text>
+    <view class="commentItem" wx:for="{{commentList}}" wx:key="item">
+      <!-- 显示每个评论项的名称、邮箱和内容 -->
+      <view class="name">name： {{item.name}} </view>
+      <view class="email">email：{{item.email}} </view>
+      <view class="commentBody">{{item.body}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!-- detail.wxml -->
+<!-- 会议详情页 -->
+<view class="page">
+  <view class="title">{{meeting.name}}</view>
+  <view class="info">
+    <view class="time">{{meeting.time}}</view>
+    <view class="location">{{meeting.location}}</view>
+  </view>
+  <view class="qrcode">
+    <!-- 签到按钮 -->
+    <view class="qrcodeBox" bindtap="gotoSuccess">签到</view>
+  </view>
+  <view class="process">
+    <!-- 会议进程 -->
+    <view class="activity">{{meeting.activity}}</view>
+    <view class="plan">{{meeting.plan}}</view>
+  </view>
+  <view class="attendees">
+    <!-- 参会人员名单 -->
+    <view class="title">参会人员</view>
+    <view class="list">
+      <!-- 已签到的人员 -->
+      <view class="item" wx:for="{{meeting.attendees}}" wx:key="index">
+        <view class="name">{{item.name}}</view>
+        <view class="status">{{item.status}}</view>
+      </view>
+    </view>
+  </view>
+</view>

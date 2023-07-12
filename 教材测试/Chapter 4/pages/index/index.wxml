@@ -1,0 +1,54 @@
+<!-- index.wxml表单页面 -->
+<view class="feedback-page">
+  <!-- 评价第一门课程部分 -->
+  <view class="section">
+    <text class="section-title">请评价本学期接触的第一门课程：</text>
+    <picker mode="selector" range="{{firstCourse}}" bindchange="handleFirstCourseChange">
+      <view class="picker-view">
+        {{firstCourse[firstCourseIndex]}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 评价教师讲解方式部分 -->
+  <view class="section">
+    <text class="section-title">请评价对教师讲解方式等方面的认同程度：</text>
+    <radio-group bindchange="handleTeacherTeachingMethodChange">
+      <label class="radio-label" wx:for="{{['非常认同',  '认同',  '一般',  '不认同',  '非常不认同']}}" wx:key="item">
+        <radio value="{{item}}"></radio>
+        <text>{{item}}</text>
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- 课堂内容建议部分 -->
+  <view class="section">
+    <text class="section-title">请针对课堂内容给出您的建议和意见：</text>
+    <textarea class="textarea-input" placeholder="请输入您的建议或意见" maxlength="200" bindinput="handleTextAreaInput"></textarea>
+  </view>
+
+  <!-- 适合自己的评估部分 -->
+  <view class="section">
+    <text class="section-title">请选择适合自己的评估方式：</text>
+    <checkbox-group bindchange="handleEvaluationMethodChange">
+      <label class="checkbox-label" wx:for="{{['平时表现',  '期末考试',  '论文',  '小组讨论']}}" wx:key="item">
+        <checkbox value="{{item}}"></checkbox>
+        <text>{{item}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+
+  <!-- 参加各类学科竞赛部分 -->
+  <view class="section">
+    <text class="section-title">是否愿意参加学校举办的各类学科竞赛和活动？</text>
+    <switch checked="{{false}}" bindchange="handleSwitchChange"></switch>
+  </view>
+  <!-- 总结性留言部分 -->
+  <view class="section">
+    <text class="section-title">总结性留言：</text>
+    <textarea class="textarea-input" placeholder="请输入总结性留言" maxlength="200" bindinput="handleSummaryInput"></textarea>
+  </view>
+  <!-- 提交按钮 -->
+  <button class="submit-button" bindtap="handleSubmitClick" hover-class="none">提交</button>
+</view>

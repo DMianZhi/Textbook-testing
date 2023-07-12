@@ -1,0 +1,121 @@
+/** @format */
+
+.page {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-size: 16px;
+  color: #666;
+}
+
+.location {
+  font-size: 16px;
+  color: #666;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 300rpx;
+}
+
+.qrcodeBox {
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  background-color: #0081ff;
+  color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 10rpx #0081ff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+@keyframes border {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+.none{
+  background-color: #fff;
+}
+.qrcodeBox::before {
+  content: "";
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 50rpx;
+  left: 50rpx;
+  background-color: #0081ff;
+  z-index: -1;
+  border-radius: 50%;
+  animation: border 1s infinite;
+}
+
+.process {
+  margin-bottom: 20px;
+}
+
+.activity {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan {
+  font-size: 16px;
+  color: #666;
+}
+
+.attendees {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  color: #666;
+}
+
+.status {
+  font-size: 16px;
+  color: #0081ff;
+}

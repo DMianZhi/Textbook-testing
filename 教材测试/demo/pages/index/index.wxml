@@ -1,0 +1,99 @@
+<!-- index.wxml -->
+<!-- <view class="outer" hover-class="hover-outer" bindtap="handleOuterTap">
+  <view class="inner" hover-class="hover-inner" bindtap="handleInnerTap"
+    hover-stop-propagation="true">
+    Inner
+  </view>
+</view> -->
+<!-- sroll-view组件 -->
+<!-- <view class="scroll">
+  <scroll-view class="container" scroll-x show-scrollbar enhanced="{{false}}" scroll-with-animation>
+    <view class="row">a</view>
+    <view class="row">b</view>
+    <view class="row">c</view>
+  </scroll-view>
+</view>
+<view class="line"></view>
+<view class="scroll2">
+  <scroll-view class="container" scroll-y show-scrollbar enhanced="{{false}}">
+    <view class="row">a </view>
+    <view class="row">b</view>
+    <view class="row">c</view>
+  </scroll-view>
+</view> -->
+
+<!-- swiper组件 -->
+<!-- <swiper class="mySwiper" autoplay interval="2000" circular indicator-dots previous-margin="60rpx">
+  <swiper-item class="myItem" wx:for="{{3}}">
+    <image src="/images/迪士尼公主合照4.png" mode="aspectFit" class="pic" />
+  </swiper-item>
+</swiper> -->
+<!-- 例子 -->
+<!-- index.wxml -->
+<!-- <swiper class="swiper" autoplay interval="2000" circular indicator-dots>
+  <swiper-item>
+    <image src="images/pic1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="images/pic2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="images/pic3.jpg"></image>
+  </swiper-item>
+</swiper> -->
+<!-- <slider min="0" max="100" step="1" value="{{sliderValue}}" bindchange="handleSliderChange"/> -->
+
+<!-- <textarea value=""/ >
+<input type="text"/> -->
+
+<!-- <input type="nickname" class="form-input" placeholder="请输入用户名" maxlength="10" /> -->
+
+
+<!-- idcard（身份证）、digit（带小数点的数字）、safe-password（密码安全）、nickname（昵称） -->
+
+
+
+
+
+
+
+
+<!-- 只能跳到普通页面 -->
+<navigator url="/pages/form/form" hover-class="navigator-hover" open-type="navigate">
+  navigate跳转到表单
+  <!-- 表单为非tabBar页面 -->
+</navigator>
+<navigator url="/pages/list/list" hover-class="navigator-hover" open-type="navigate">
+  navigate跳转到list
+</navigator>
+<!-- 只能跳到tabbar页面 -->
+<navigator url="/pages/list/list" hover-class="navigator-hover" open-type="switchTab">
+  swithtab跳转到list
+  <!-- 表单为非tabBar页面 -->
+</navigator>
+<navigator url="/pages/form/form" hover-class="navigator-hover" open-type="switchTab">
+  swithtab跳转到form
+</navigator>
+<!-- 可以跳到tabbar页面，也可以跳到普通页面 -->
+<navigator url="/pages/form/form" hover-class="navigator-hover" open-type="reLaunch">
+  relaunch跳转到表单
+</navigator>
+<navigator url="/pages/list/list" hover-class="navigator-hover" open-type="reLaunch">
+  relaunch跳转到list
+</navigator>
+
+<!--  -->
+<navigator url="/pages/form/form" hover-class="navigator-hover" open-type="redirect">
+  redirect跳转到form
+</navigator>
+<navigator url="/pages/about/about" hover-class="navigator-hover" open-type="redirect">
+  redirect跳转到about
+</navigator>
+<radio-group bindchange="onGenderChange">
+  <radio value="male" checked/>男
+  <radio value="female"/>女
+</radio-group>
+<checkbox-group bindchange="onHobbyChange">
+  <checkbox value="reading"/>阅读
+  <checkbox value="traveling"/>旅游
+</checkbox-group>

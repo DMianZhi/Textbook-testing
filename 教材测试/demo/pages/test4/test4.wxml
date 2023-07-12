@@ -1,0 +1,31 @@
+<!-- user.wxml -->
+<!-- 个人中心页 -->
+<view class="page">
+  <view class="title">个人中心</view>
+  <view class="info">
+    <view class="name">{{user.name}}</view>
+    <view class="phone">{{user.phone}}</view>
+    <view class="email">{{user.email}}</view>
+  </view>
+  <!-- 修改个人信息按钮 -->
+  <button class="update-btn" bindtap="showModal">修改个人信息</button>
+</view>
+<!-- 弹框遮罩层 -->
+<view class="mask {{modalVisible ? 'show' : ''}}" bindtap="hideModal"></view>
+
+<!-- 弹框 -->
+<view class="modal {{modalVisible ? 'show' : ''}}">
+<view class="title">个人信息</view>
+  <form bindsubmit="handleSubmit" class="form">
+    <!-- 表单元素 -->
+    <input name="name" type="text" placeholder="请输入姓名" />
+    <input name="phone" type="number" placeholder="请输入手机号码" />
+    <input name="email" type="email" placeholder="请输入邮箱地址" />
+
+    <!-- 操作按钮 -->
+    <view class="buttons">
+      <button class="cancel" type="button" bindtap="hideModal">取消</button>
+      <button class="submit" type="submit" bindtap="handleSubmit" form-type="submit">保存</button>
+    </view>
+  </form>
+</view>

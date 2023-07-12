@@ -1,0 +1,57 @@
+<view class="box">
+</view>
+<textarea name="content" placeholder="请输入评论内容" maxlength="200" auto-height="{{true}}" show-confirm-bar="{{false}}" adjust-position="{{true}}" bindinput="handleInput">
+</textarea>
+placeholder-style 指定 placeholder 的样式，目前仅支持color,font-size和font-weight
+placeholder-class 指定 placeholder 的样式类
+<radio-group bindchange="onGenderChange">
+  <radio value="male" checked disabled="{{disabled}}" />男
+  <radio value="female" checked="{{false}}" disabled="{{disabled}}" />女
+</radio-group>
+<checkbox-group bindchange="onHobbyChange">
+  <checkbox value="reading" checked="{{false}}" disabled="{{disabled}}" />阅读
+  <checkbox value="traveling" checked disabled="{{disabled}}" />旅游
+</checkbox-group>
+<!-- switch -->
+<switch checked="{{switchChecked}}" bindchange="switchChange">是否启用</switch>
+<!-- button -->
+<button type="primary" size="default" loading="{{isLoading}}" disabled="{{isDisabled}}" bindtap="onButtonClick">提交</button>
+<!-- label -->
+<label for="submit-btn">提交按钮：</label>
+<button id="submit-btn">提交</button>
+
+
+<label class="checkbox-wrap" bindtap="onCheckboxClick">
+  <checkbox value="{{isChecked}}" />
+  <text>同意服务条款</text>
+</label>
+<view>
+
+</view>
+<view>
+  请选择性别（单选）：
+  <radio-group name="gender" bindchange="handleRadioChange">
+    <label class="radio-label">
+      <radio value="male" checked />男
+    </label>
+    <label class="radio-label">
+      <radio value="female" />女
+    </label>
+  </radio-group>
+</view>
+<label class="form-label">
+  是否开启推送：
+  <switch checked="{{isPushOn}}" bindchange="handleSwitchChange" />
+</label>
+<view>
+  <label for="username">用户名：</label>
+  <input type="text" id="username" name="username" placeholder="请输入用户名" />
+  <label for="password">密码：</label>
+  <input type="password" id="password" name="password" placeholder="请输入密码" />
+</view>
+<view>
+  <label for="username">用户名：</label>
+  <input type="text" id="username" name="username" placeholder="请输入用户名" />
+  <label for="password">密码：</label>
+  <input type="password" id="password" name="password" placeholder="请输入密码" />
+</view>

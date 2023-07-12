@@ -1,0 +1,11 @@
+<!--components/list/list.wxml-->
+
+<view class="container">
+  <!-- 使用 wx:for 指令循环遍历列表数组 listArr -->
+  <view class="item" wx:for="{{listArr}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+    <!-- 显示每个列表项的标题和内容 -->
+    <view class="title">{{ item.title }}</view>
+    <view class="body">{{item.body}}</view>
+  </view>
+</view>
+

@@ -1,0 +1,9 @@
+<!--pages/api/api.wxml-->
+<text>pages/api/api.wxml</text>
+<!--  -->
+<view bindtap="request">
+  请求api
+</view>
+<view class="pic" wx:for="{{picData}}">
+  <image src="{{item.download_url}}" mode="" />
+</view>

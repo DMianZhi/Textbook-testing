@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="form-group">
+    <input type="text" name="account" value="{{account}}" placeholder="请输入账号" bindinput="handleAccountInput" />
+  </view>
+  <view class="form-group">
+    <input type="password" name="password" value="{{password}}" placeholder="请输入密码" bindinput="handlePasswordInput" />
+  </view>
+  <view class="button-group">
+    <button type="primary" size="default" form-type="submit" disabled="{{!canSubmit}}" bindtap="handleLoginFormSubmit">登录</button>
+    <button type="warning" size="default" wx:if="{{!isUserLoggedIn}}" bindtap="handleLogoutButtonClick">退出登录</button>
+  </view>
+  <view class="info-group">
+    <view>账户名：{{currentUser.account || '暂未登录'}}</view>
+    <view>上次登录时间：{{currentUser.currentTime}}</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/result/result.wxml-->
+<view class="container">
+<icon type="success" size="90"/>
+  <view class="title">提交成功</view>
+  <view class="message">感谢你的积极反馈</view>
+</view>
+

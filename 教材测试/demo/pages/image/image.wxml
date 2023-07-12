@@ -1,0 +1,22 @@
+<!--pages/test/test.wxml-->
+<view class="container">
+  <swiper class="swiper" indicator-dots autoplay>
+    <swiper-item>
+      <view class="text">scaleToFill</view>
+      <image class="swiper-img" src="/images/pic.jpeg" mode="scaleToFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <view class="text">aspectFit</view>
+      <image class="swiper-img" src="/images/pic.jpeg" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item>
+      <view class="text">aspectFill</view>
+      <image class="swiper-img" src="/images/pic.jpeg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <view class="text">widthFix</view>
+      <image class="swiper-img" src="/images/pic.jpeg" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+

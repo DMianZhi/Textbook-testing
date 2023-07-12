@@ -1,0 +1,13 @@
+<!-- index.wxml -->
+<!-- 主页 -->
+<view class="page">
+  <view class="title">即将开始的会议</view>
+  <!-- 会议列表 -->
+  <navigator class="item" wx:for="{{meetings}}" wx:key="index" url="/pages/test2/test2?id={{item.id}}" open-type="navigate">
+    <view>
+      <view class="name">{{item.name}}</view>
+      <view class="time">{{item.time}}</view>
+      <view class="location">{{item.location}}</view>
+    </view>
+  </navigator>
+</view>

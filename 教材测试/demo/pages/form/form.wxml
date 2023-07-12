@@ -1,0 +1,37 @@
+<!-- pages/demo1/demo1.wxml -->
+<view class="container">
+  <view class="information">
+    <text>我的信息</text>
+    <view class="name">姓名：{{userInfo.name}}</view>
+    <view class="gender">性别：{{userInfo.gender}}</view>
+    <view class="hobby">爱好：{{userInfo.hobby}}</view>
+  </view>
+  <form bindsubmit="submitForm">
+    <view class="group">
+      <label for="">姓名：</label>
+      <input type="text" id="name" name="name" placeholder="请输入姓名" model:value="{{name}}" />
+    </view>
+    <view class="group">
+      <label for="">性别：</label>
+      <picker mode="selector" id='gender' range="{{['男','女']}}" name="gender" model:value="{{genderIndex}}" bindchange="onGenderChange">
+        <view class="picker">{{genderList[genderIndex]}} </view>
+      </picker>
+    </view>
+    <view class="group">
+      <label for="">爱好：</label>
+      <checkbox-group name="hobby" id="hobby">
+        <label for="" class="checkbox-label">
+          <checkbox value="1" />音乐
+        </label>
+        <label for="" class="checkbox-label">
+          <checkbox value="2" />电影
+        </label>
+        <label for="" class="checkbox-label">
+          <checkbox value="3" />阅读
+        </label>
+      </checkbox-group>
+    </view>
+    <button class="btn" form-type="submit" type="primary">提交</button>
+  </form>
+</view>
+<navigator url="/pages/viewscroll/viewscroll" hover-class="navigator-hover" open-type="navigate"> 跳转到scroll </navigator>
